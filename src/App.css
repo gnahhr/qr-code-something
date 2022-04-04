@@ -1,3 +1,21 @@
+
+header {
+  background-color: aqua;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li{
+  list-style-type: none;
+  padding: 1rem;
+}
+
+header ul li a{
+  text-decoration: none;
+}
+
 #scanVid{
   height: 250px;
   width: 350px;
