@@ -2,3 +2,9 @@
   height: 250px;
   width: 350px;
 }
+.App{
+  min-height: 100vh;
+  padding-top: 2em;
+  background: linear-gradient(to top, #3204fd, #9907fa),url("../src/images/bg.jpg") no-repeat top center;
+  background-repeat: no-repeat;
+}
