@@ -12,10 +12,10 @@ function App() {
         <Header />
   
           <Routes>
-            <Route path="/cafeteria"  element={<QRGeneratorPage location="cafeteria" />} />
-            <Route path="/meeting"  element={<QRGeneratorPage location="meeting room" />} />
-            <Route path="/basketball"  element={<QRGeneratorPage location="basketball court" />} />
-            <Route path="/videogame"  element={<QRGeneratorPage location="video game hall" />} />
+            <Route path="/cafeteria"  element={<QRGeneratorPage location="Cafeteria" />} />
+            <Route path="/meeting"  element={<QRGeneratorPage location="Meeting Room" />} />
+            <Route path="/basketball"  element={<QRGeneratorPage location="Basketball Court" />} />
+            <Route path="/videogame"  element={<QRGeneratorPage location="Video Game Hall" />} />
             <Route path="/" exact element={<QRScannerPage />} />
             <Route path="/audit" element={<AuditPage />} />
           </Routes>

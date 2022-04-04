@@ -21,14 +21,11 @@ const QRScannerPage = () => {
 
   return (
     <div className="QRScannerPage">
-     
-    
-
       <Camera name={name} contact={contact} address={address} />
       <div className="QRScannerPage-input-container">
-      <input type="text" name="username" id="username" placeholder="Username" onChange={(e) => onChangeText(e)} /> <br />
-      <input type="tel" name="contact" id="contact" placeholder="Contact Number" onChange={(e) => onChangeText(e)} /> <br />
-      <input type="text" name="address" id="address" placeholder="Address" onChange={(e) => onChangeText(e)} /> <br />
+      <input type="text" name="username" id="username" placeholder="Username" onChange={(e) => onChangeText(e)} value={name} /> <br />
+      <input type="tel" name="contact" id="contact" placeholder="Contact Number" onChange={(e) => onChangeText(e)} value={contact}/> <br />
+      <input type="text" name="address" id="address" placeholder="Address" onChange={(e) => onChangeText(e)} value={address}/> <br />
       </div>
     </div>
   );

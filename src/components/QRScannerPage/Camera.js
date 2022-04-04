@@ -12,7 +12,8 @@ const Camera = ({ name, contact, address }) => {
   }
 
   const insertQuery = async (name, contact, address, location) => {
-    await axios.post("https://4000-talyho-hackathonthree-g3f96dd6iu1.ws-us38.gitpod.io/", {
+    console.log("loc:",location);
+    await axios.post("https://4000-talyho-hackathonthree-g3f96dd6iu1.ws-us38.gitpod.io/api/log/login", {
       name: name,
       contactNumber: contact,
       address: address,
@@ -24,9 +25,8 @@ const Camera = ({ name, contact, address }) => {
 
   if (videoElem) {
     qrs = new QrScanner(videoElem, async (result) => {
-      setRes(result.data);
-      console.log("Succesfully logged in");
-      insertQuery(name, contact, address, res);
+      console.log("Succesfully logged in", result.data);
+      insertQuery(name, contact, address, result.data);
       qrs.stop();
     }, options);
   }
@@ -40,13 +40,13 @@ const Camera = ({ name, contact, address }) => {
   }
 
   return (
-    <header className="qr-scanner">
+    <div className="qr-scanner">
       <div className="video-container">
         <video id="scanVid" width="1000px" height="1000px"></video>
       </div>
 
       <button className="qr-scanner-button" onClick={startCam}>Scan QR</button>
-    </header>
+    </div>
   )
 }
 

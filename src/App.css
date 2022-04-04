@@ -1,10 +1,6 @@
-
-header {
-  background-color: aqua;
-}
-
 header ul {
   display: flex;
+  justify-content: space-evenly;
 }
 
 header ul li{
@@ -14,6 +10,7 @@ header ul li{
 
 header ul li a{
   text-decoration: none;
+  color:white;
 }
 
 #scanVid{

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import QRCode from 'qrcode'
+import './QRGeneratorPage.css';
 
 const QRGeneratorPage = (props) => {
     const[canvas, setCanvas] = useState('');
 
     useEffect(()=> {
         setCanvas(document.getElementById('canvas'));
-        console.log(props.location);
     }, [])
 
     QRCode.toCanvas(canvas, props.location, function (error) {
@@ -15,8 +15,8 @@ const QRGeneratorPage = (props) => {
     })
   return (
     <div>
-        <h1>QR: {props.location}</h1>
-        <canvas id="canvas"></canvas>
+        <h1>{props.location} QR Code</h1>
+        <canvas id="canvas" style={{width:"500", height:"500"}}></canvas>
     </div>
   )
 }
