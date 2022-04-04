@@ -40,10 +40,10 @@ const Camera = ({name, contact, address}) => {
     }
 
   return (
-    <header className="qr-scanner">
+    <div className="qr-scanner">
         <video id="scanVid"></video>
         <button onClick={startCam}>Scan QR</button>
-    </header>
+    </div>
   )
 }
 
